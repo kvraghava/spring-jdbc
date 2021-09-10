@@ -1,0 +1,11 @@
+package com.spring.jdbc;
+
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+
+public class EmployeeDAO {
+
+	public SimpleJdbcTemplate jdbcTemplate;
+
+	
+
+}

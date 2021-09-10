@@ -1,0 +1,18 @@
+package com.spring.jdbc;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.PreparedStatementCallback;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+public class EmployeeDAO {
+
+	public SimpleJdbcTemplate jdbcTemplate;
+
+	
+
+}

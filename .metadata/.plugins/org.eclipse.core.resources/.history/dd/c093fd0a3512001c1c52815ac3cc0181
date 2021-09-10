@@ -1,0 +1,16 @@
+package com.spring.jdbc;
+
+
+
+public class EmployeeDAO {
+
+	SimpleJdbcTemplate jdbcTemplate;
+
+	public int update(Employee e) {
+		String query = "update employee set name=? where id=?";
+		return jdbcTemplate.update(query, e.getName(), e.getId());
+
+		// String query="update employee set name=?,salary=? where id=?";
+		// return template.update(query,e.getName(),e.getSalary(),e.getId());
+	}
+}
