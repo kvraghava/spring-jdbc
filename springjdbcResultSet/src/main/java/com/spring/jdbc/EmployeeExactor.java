@@ -17,7 +17,7 @@ public class EmployeeExactor implements ResultSetExtractor<List<Employee>> {
 			Employee e = new Employee();
 			e.setId(rs.getInt(1));
 			e.setName(rs.getString(2));
-			e.setSalary(rs.getDouble(3));
+			e.setSalary(rs.getInt(3));
 			list.add(e);
 		}
 		return list;

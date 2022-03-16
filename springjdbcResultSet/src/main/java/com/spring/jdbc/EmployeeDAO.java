@@ -30,23 +30,23 @@ public class EmployeeDAO {
 
 	public List<Employee> selectAll() {
 		List<Employee> employees = new ArrayList<>();
-		List<Map<String, Object>> l = jdbcTemplate.queryForList("select *from Emp123");
+		List<Map<String, Object>> l = jdbcTemplate.queryForList("select *from emp_sj_1");
 		
 		for(Map row:l) {
 			Employee emp = new Employee();
 			emp.setId(Integer.parseInt(row.get("id").toString()));
 			emp.setName(row.get("name").toString());
-			emp.setSalary(Double.parseDouble(row.get("sal").toString()));
+			emp.setSalary(Integer.parseInt(row.get("salary").toString()));
 			employees.add(emp);
 		}
 		return employees;
 	}
 
 	public List<Employee> getAllEmployees() {
-		return jdbcTemplate.query("select * from emp123", new EmployeeExactor());			
+		return jdbcTemplate.query("select * from emp_sj_1", new EmployeeExactor());			
 	}
 	
 	public List<Employee> getAllEmpByRowmapper(){
-		return jdbcTemplate.query("select * from emp123", new EmployeeRowMapper());
+		return jdbcTemplate.query("select * from emp_sj_1", new EmployeeRowMapper());
 	}
 }

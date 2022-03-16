@@ -4,13 +4,13 @@ public class Employee {
 	
 	private int id;  
 	private String name;  
-	private double salary;
+	private int salary;
 	
 	public Employee() {
 		
 	}
 	
-	public Employee(int id, String name, double salary) {
+	public Employee(int id, String name, int salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -29,10 +29,10 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getSalary() {
+	public int getSalary() {
 		return salary;
 	}
-	public void setSalary(double salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 

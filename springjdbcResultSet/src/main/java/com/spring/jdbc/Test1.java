@@ -11,8 +11,8 @@ public class Test1 {
 	      
 		EmployeeService empService = (EmployeeService)ctx.getBean("emp");
 		//empService.insertEmployee();
-		//empService.selectAll();
-		//empService.getAllEmployee();
+		empService.selectAll();
+		empService.getAllEmployee();
 		empService.getAllEmpRowMapper();
 	    //System.out.println(status);
 	}
